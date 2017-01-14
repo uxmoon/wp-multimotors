@@ -87,7 +87,7 @@ add_filter( 'rwmb_meta_boxes', 'mmotors_custom_html_demo' );
 function mmotors_custom_html_demo( $meta_boxes ) {
 	$prefix = 'cf_';
 	$meta_boxes[] = array(
-		'title'      => __( 'Custom HTML Demo', 'your-prefix' ),
+		'title'      => __( 'Fotos del auto cargadas anteriormente', 'your-prefix' ),
 		'post_types' => array( 'autousado', 'autoclasico', 'motos' ),
 		'fields'     => array(
 			array(

@@ -29,7 +29,7 @@ get_header(); ?>
         <div class="entry-content">
 
           <!-- sidebar -->
-          <div class="">
+          <div class="c-search__sidebar">
             <?php
               if( is_page( 'autos-usados' ) ) {
                 echo do_shortcode( '[searchandfilter id="4033"]' );
@@ -42,7 +42,7 @@ get_header(); ?>
           </div>
 
           <!-- content -->
-          <div class="">
+          <div class="c-search__results">
           <?php
             if( is_page( 'autos-usados' ) ) {
               echo do_shortcode( '[searchandfilter id="4033" show="results"]' );

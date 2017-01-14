@@ -1,0 +1,584 @@
+// Generic
+@import "normalize";
+@import "box-sizing";
+@import "reset";
+
+// Mixins
+@import "bourbon";
+
+// Layout
+@import "breakpoint";
+@import "susy";
+
+// Carousel CSS
+@import "slick";
+@import "slick-theme";
+
+// Search and Filter
+@import "searchandfilter";
+
+// Pagenavi CSS
+@import "pagenavi";
+
+
+
+
+// Settings - Fonts
+
+$base-font-size   :  16px;
+$base-line-height :  1.5;
+
+
+
+
+
+// Settings - Colors
+
+$color-white  : #fff;
+$color-black  : #222;
+$color-gray   : #797C83;
+$color-gray-2 : #D5D5D5;
+$color-gray-3 : #999;
+$color-gray-4 : #eee;
+$color-link   : #1D92CF;
+
+
+
+
+
+// Settings - Layout
+
+$susy: (
+  container: 62.5em,
+  gutter-position: split,
+  gutters: 1/2,
+  columns: 12,
+  global-box-sizing: border-box,
+);
+
+$bp-small: max-width 47.9375em;
+$bp-desktop: 48em;
+
+@include breakpoint($bp-small) {}
+@include breakpoint($bp-desktop) {}
+
+
+
+
+
+// Elements - Images
+
+img {
+  max-width: 100%;
+  font-style: italic;
+  vertical-align: middle;
+}
+
+// Elements - Page
+
+body {
+  background-color: $color-gray;
+  font-family: $helvetica;
+}
+
+.site {
+  @include container;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.site-content {
+  background-color: $color-white;
+}
+
+
+
+
+
+// Elements - links
+
+a:link,
+a:visited {
+  color: #2D92CF;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+
+
+
+
+// Elements - Typography
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Ruda', sans-serif;
+  font-weight: 700;
+}
+
+@include breakpoint($bp-small) {
+  h1, h2, h3 {
+    font-size: rem(18);
+  }
+}
+
+p, li, label {
+  font-family: $helvetica;
+  line-height: $base-line-height;
+  font-size: rem(14);
+}
+
+
+// header__top
+
+.site-header__top {
+  @include clearfix;
+  padding-top: gutter();
+  padding-bottom: gutter();
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  background-color: $color-white;
+}
+
+.site-branding {
+  background-color: $color-gray-4;
+  padding: gutter();
+}
+
+.site-title img {
+  width: 100%;
+  max-width: 374px;
+  height: auto;
+}
+
+.fb-like {
+  @include span(4 of 12);
+}
+
+.c-contact-list {
+  @include span(8 of 12);
+  text-align: right;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    display: inline-block;
+    font-size: rem(14);
+  }
+
+  .icon {
+    position: relative;
+    top: 2px;
+  }
+}
+
+
+
+
+// Component - Anchor nav
+
+.c-anchor-nav {
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    @include clearfix;
+  }
+
+  li {
+    margin-right: gutter();
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .site-header & {
+    text-align: center;
+
+    @include breakpoint($bp-desktop) {
+      padding-top: 24px;
+    }
+
+    li {
+      display: inline-block;
+      font-size: rem(16);
+      font-family: 'Ruda', sans-serif;
+      font-weight: 700;
+    }
+
+  } // site-header
+
+  .site-footer & {
+    display: none;
+
+    @include breakpoint($bp-desktop) {
+      display: block;
+      // @include span(8 of 12);
+    }
+
+    li {
+      float: left;
+      font-size: rem(13);
+      line-height: 1;
+      padding-right: gutter();
+      border-right: 1px solid $color-gray-3;
+
+      &:last-child {
+        padding: 0;
+        border-width: 0;
+      }
+    }
+  } // site-footer
+
+}
+
+
+
+
+
+// Site Footer
+
+.site-footer {
+  @include clearfix;
+  padding: gutter();
+  background-color: $color-gray-2;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+
+.site-info {
+  color: $color-black;
+  font-size: rem(13);
+  text-align: center;
+  text-shadow: 0px 1px 0px $color-white;
+
+  @include breakpoint($bp-desktop) {
+    text-align: left;
+    float: left;
+  }
+}
+
+
+
+
+
+// Icon
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+
+
+
+
+// About us
+
+.about-us {
+  @include clearfix;
+  margin-bottom: 1rem;
+}
+
+.about-us__title {
+  @include span(12);
+  margin-bottom: gutter();
+}
+
+.about-us__item img {
+  width: 100%;
+  height: auto;
+}
+
+@include breakpoint($bp-small) {
+
+  .about-us__item {
+    margin-left: gutter();
+    margin-right: gutter();
+    margin-bottom: gutter() * 2;
+  }
+
+}
+
+@include breakpoint($bp-desktop) {
+
+  .about-us__item {
+    @include span(4 of 12);
+  }
+
+}
+
+
+
+
+
+// Accessibility
+
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+.screen-reader-text:focus {
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  color: #21759b;
+  display: block;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000; /* Above WP toolbar. */
+}
+
+
+
+
+
+// Text - Intro
+
+.text-intro {
+  background-color: $color-gray-2;
+  padding: gutter();
+  margin-bottom: gutter() * 2;
+
+  p {
+    text-align: center;
+    font-family: 'Ruda', sans-serif;
+    font-size: rem(18);
+    text-shadow: 0px 1px 0px $color-white;
+  }
+
+}
+
+
+
+
+
+// text featured
+
+.text-featured {
+  margin-bottom: gutter() * 2;
+  margin-left: span(1 of 12);
+  margin-right: span(1 of 12);
+  padding-top: gutter();
+  padding-bottom: gutter();
+  border-bottom: 1px solid $color-gray-2;
+  border-top: 1px solid $color-gray-2;
+
+  p {
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+}
+
+// Title - entry title
+
+.entry-title {
+  background-color: $color-gray-2;
+  padding: gutter();
+
+  // @include breakpoint($bp-desktop) {
+  //   font-size: rem(24);
+  // }
+}
+
+.entry-content {
+  @include clearfix;
+  padding-bottom: gutter() * 2;
+
+  .single & {
+    padding-top: gutter() * 2;
+  }
+
+  .page-template & {
+    padding-top: gutter() * 2;
+  }
+}
+
+// page-template page-template-page-search-filter page-template-page-search-filter-php page page-id-9 logged-in wp-custom-logo
+
+
+
+
+
+// image and info
+
+.c-contact {
+  position: relative;
+  margin-bottom: gutter() * 2;
+}
+
+.c-contact__content {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  @include transform(translateY(-50%));
+  padding: gutter() * 2;
+  width: span(5 of 12);
+  @include push(6 of 12);
+
+  background-color: rgba(0, 0, 0, 0.85);
+
+  h4, p {
+    color: $color-white;
+  }
+}
+
+.c-form {
+  @include span(6 of 12);
+}
+
+.c-map {
+  @include span(6 of 12);
+}
+
+.c-map__content {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 75%;
+
+  iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+}
+
+
+
+
+
+// Single - Content auto
+
+.carousel-home {}
+
+.carousel-home__item {
+  position: relative;
+}
+
+.carousel-home__title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.85);
+  color: $color-white;
+
+  font-family: 'Ruda', sans-serif;
+  font-weight: 700;
+  font-size: rem(20);
+}
+
+.carousel-single {
+  @include span(8 of 12);
+}
+
+.c-details {
+  @include span(4 of 12);
+  // @include push(1 of 12);
+}
+
+.c-details__list {
+  list-style-type: none;
+  margin-left: 0;
+  margin-bottom: 1rem;
+
+  li {
+    line-height: $base-line-height;
+  }
+}
+
+
+
+
+
+// Forms
+
+input[type="text"],
+input[type="email"],
+input[type="submit"],
+textarea {
+  width: 100%;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  margin-bottom: rem(10);
+}
+
+input[type="submit"] {
+  background-color: $color-link;
+  color: $color-white;
+  text-align: center;
+  border-width: 0;
+  font-size: rem(14);
+  padding: rem(10);
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+
+
+
+
+// Carousel - About
+
+.carousel-about {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+}
+
+
+
+
+
+// List - Searach and filter
+
+.c-search__sidebar {
+  @include span(3 of 12);
+}
+
+.c-search__results {
+  @include span(9 of 12);
+}
+
+.c-search__results-item {
+  @include gallery(4 of 12);
+  margin-bottom: gutter();
+  font-size: rem(14);
+
+  img {
+    display: block;
+  }
+}

@@ -21,6 +21,13 @@
  * @uses mmotors_header_style()
  */
 function mmotors_custom_header_setup() {
+	add_theme_support( 'custom-logo', array(
+		'height'      => 74,
+		'width'       => 375,
+		'flex-width' => false,
+		'flex-height' => false
+	) );
+
 	add_theme_support( 'custom-header', apply_filters( 'mmotors_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',

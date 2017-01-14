@@ -103,15 +103,15 @@ add_action( 'widgets_init', 'mmotors_widgets_init' );
  * Enqueue scripts and styles.
  */
 function mmotors_scripts() {
-	wp_enqueue_style( 'mmotors-style', get_stylesheet_uri() );
+	// wp_enqueue_style( 'mmotors-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'mmotors-google-fonts', 'https://fonts.googleapis.com/css?family=Ruda:400,700' );
-	// wp_enqueue_style( 'mmotors-theme', get_template_directory_uri() . '/css/theme.css' );
-	wp_enqueue_style( 'mmotors-search-filter', get_template_directory_uri() . '/css/search-filter.css' );
-	wp_enqueue_style( 'mmotors-carousel', get_template_directory_uri() . '/css/slick.css' );
-	wp_enqueue_style( 'mmotors-carousel-theme', get_template_directory_uri() . '/css/slick-theme.css' );
+	wp_enqueue_style( 'mmotors-theme', get_template_directory_uri() . '/css/app.css' );
+	// wp_enqueue_style( 'mmotors-search-filter', get_template_directory_uri() . '/css/search-filter.css' );
+	// wp_enqueue_style( 'mmotors-carousel', get_template_directory_uri() . '/css/slick.css' );
+	// wp_enqueue_style( 'mmotors-carousel-theme', get_template_directory_uri() . '/css/slick-theme.css' );
 
 	// wp_enqueue_script('jquery');
-	wp_enqueue_script( 'mmotors-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	// wp_enqueue_script( 'mmotors-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 	wp_enqueue_script( 'mmotors-carousel-js', get_template_directory_uri() . '/js/slick.min.js', array('jquery'), '20151215', true );
 	wp_enqueue_script( 'mmotors-carousel-setup', get_template_directory_uri() . '/js/carousel.js', array('jquery'), '20151215', true );
 
@@ -146,7 +146,7 @@ require get_template_directory() . '/inc/customizer.php';
 /**
  * Load Jetpack compatibility file.
  */
-require get_template_directory() . '/inc/jetpack.php';
+// require get_template_directory() . '/inc/jetpack.php';
 
 /**
  * Load Meta Boxes
@@ -157,3 +157,17 @@ require get_template_directory() . '/inc/metabox.php';
  * Tweaks for wordpress and plugins
  */
 require get_template_directory() . '/inc/tweaks.php';
+
+// add_filter('wp_title','search_form_title');
+
+// function search_form_title($title){
+
+// 	global $searchandfilter;
+
+// 	if ( $searchandfilter->active_sfid() == 4037) {
+// 		return 'Search Results';
+// 	} else {
+// 		return $title;
+// 	}
+
+// }

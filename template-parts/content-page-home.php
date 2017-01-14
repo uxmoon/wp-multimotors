@@ -25,8 +25,8 @@ $upload_dir = wp_upload_dir();
       <?php if ( $the_query->have_posts() ) : ?>
       <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
-				<div class="slider-home__item">
-					<?php the_title('<div class="slider-home__title">', '</div>'); ?>
+				<div class="carousel-home__item">
+					<?php the_title('<div class="carousel-home__title">', '</div>'); ?>
 
 					<?php if ( has_post_thumbnail() ) : ?>
 
@@ -41,12 +41,12 @@ $upload_dir = wp_upload_dir();
 			<?php endif; ?>
 		</div><!-- .carousel-home -->
 
-		<div class="text-slogan">
+		<div class="text-intro">
 			<p>Desde 1992 nos especializamos en la venta de autos premium, siempre en familia.</p>
-		</div><!-- .text-slogan -->
+		</div><!-- .text-intro -->
 
 		<div class="text-featured">
-			<p class="home-message__info">Nuestros autos estuvieron presentes en el programa de Escala Clásica, <a href="/escala-clasica/" title="Mira los vídeos">mira los vídeos</a>.</p>
+			<p>Nuestros autos estuvieron presentes en el programa de Escala Clásica, <a href="/escala-clasica/" title="Mira los vídeos">mira los vídeos</a>.</p>
 		</div><!-- .text-featured -->
 
 		<div class="about-us">

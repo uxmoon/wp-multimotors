@@ -4,7 +4,7 @@
 
     var $carouselHome   = $('.carousel-home'),
         $carouselSingle = $('.carousel-single'),
-        $carouselAbout  = $('.slider-about');
+        $carouselAbout  = $('.carousel-about');
 
     $carouselHome.slick({
       autoplay: true,
@@ -13,8 +13,7 @@
       slidesToShow: 1,
       slidesToScroll: 1,
       dots: true,
-      arrows: true,
-      slide: '.slider-home__item'
+      arrows: true
     });
 
     $carouselSingle.slick({

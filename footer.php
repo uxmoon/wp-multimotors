@@ -15,11 +15,11 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 
-		<p class="site-footer__copy">Copyright &copy; <?php echo date('Y'); ?> MultiMotors</p>
+		<div class="site-info">Copyright &copy; <?php echo date('Y'); ?> MultiMotors</div>
 
 		<?php
 			wp_nav_menu( array(
-			'container_class' => 'site-footer__menu',
+			'container_class' => 'c-anchor-nav',
 			'theme_location'  => 'secondary' )
 			);
 		?>

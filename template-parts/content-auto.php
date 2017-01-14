@@ -61,37 +61,40 @@
      <span class="ribbon">Vendido</span>
     <?php } ?>
 
-    <ul class="product-details">
-      <li>Marca:
-        <?php
-        // http://wordpress.stackexchange.com/questions/88953/display-current-taxonomy-term-when-inside-custom-post-type
-        global $post;
-        // Get terms for post
-        $terms = get_the_terms( $post->ID , 'marca' );
-        // Loop over each item since it's an array
-        if ( $terms != null ){
-          foreach( $terms as $term ) {
-            $term_link = get_term_link( $term, 'marca' );
-            // Print the name and URL
-            echo $term->name;
-            // Get rid of the other data stored in the object, since it's not needed
-            unset($term);
-          }
-        } ?></li>
-      <li>Modelo: <?php echo rwmb_meta('cf_automodelo'); ?></li>
-      <li>Año: <?php echo rwmb_meta('cf_autoyear'); ?></li>
-      <li>Color: <?php echo rwmb_meta('cf_autocolor'); ?></li>
-      <li>Kilometraje: <?php echo rwmb_meta('cf_autokm'); ?></li>
-      <li>Información adicional: <?php echo rwmb_meta('cf_autoinfo'); ?></li>
-    </ul>
+    <div class="c-details">
 
-    <?php if ( rwmb_meta('cf_is_sell') === 'no' ) { ?>
-      <div class="product-form">
-        <h3>Envíenos su consulta</h3>
-        <?php echo do_shortcode('[contact-form-7 id="2980" title="consulta modelo"]'); ?>
-      </div>
-    <?php } ?>
+      <ul class="c-details__list">
+        <li>Marca:
+          <?php
+          // http://wordpress.stackexchange.com/questions/88953/display-current-taxonomy-term-when-inside-custom-post-type
+          global $post;
+          // Get terms for post
+          $terms = get_the_terms( $post->ID , 'marca' );
+          // Loop over each item since it's an array
+          if ( $terms != null ){
+            foreach( $terms as $term ) {
+              $term_link = get_term_link( $term, 'marca' );
+              // Print the name and URL
+              echo $term->name;
+              // Get rid of the other data stored in the object, since it's not needed
+              unset($term);
+            }
+          } ?></li>
+        <li>Modelo: <?php echo rwmb_meta('cf_automodelo'); ?></li>
+        <li>Año: <?php echo rwmb_meta('cf_autoyear'); ?></li>
+        <li>Color: <?php echo rwmb_meta('cf_autocolor'); ?></li>
+        <li>Kilometraje: <?php echo rwmb_meta('cf_autokm'); ?></li>
+        <li>Información adicional: <?php echo rwmb_meta('cf_autoinfo'); ?></li>
+      </ul>
 
+      <?php if ( rwmb_meta('cf_is_sell') === 'no' ) { ?>
+        <div class="c-details__form">
+          <h3>Envíenos su consulta</h3>
+          <?php echo do_shortcode('[contact-form-7 id="2980" title="consulta modelo"]'); ?>
+        </div>
+      <?php } ?>
+
+    </div><!-- .c-details -->
   </div><!-- .entry-content -->
 
 
