@@ -56,7 +56,7 @@ get_header(); ?>
 
           <?php endwhile;
 
-            the_posts_navigation();
+            wp_pagenavi();
 
             else :
 
