@@ -3,7 +3,6 @@
 ## Plugins
 
 - Custom Post Type UI
-- Meta box Api Key: f66eceba2972bfe6775e5afbbe54ba8a
 - Search and Filter [link](https://www.designsandcode.com/wordpress-plugins/search-filter/) Documentation [link](https://www.designsandcode.com/documentation/search-filter-pro/getting-started/display-search-form/)
 
 ## Custom Post Types
