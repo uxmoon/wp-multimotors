@@ -19,7 +19,7 @@ get_header(); ?>
       <div class="entry-content">
 
         <div class="c-search__sidebar">
-          <?php echo do_shortcode('[searchandfilter id="4037"]'); ?>
+          <?php echo do_shortcode('[searchandfilter id="4038"]'); ?>
         </div>
 
         <div class="c-search__results">
@@ -39,7 +39,7 @@ get_header(); ?>
 
               // brand
               global $post;
-              $terms = wp_get_post_terms( $post->ID, 'marcasclasicos');
+              $terms = wp_get_post_terms( $post->ID, 'marcasmotos');
               foreach( $terms as $term ) {
                 echo '<span itemprop="brand">' . $term->name . '</span>';
                 unset($term);
@@ -56,7 +56,7 @@ get_header(); ?>
 
           <?php endwhile;
 
-            the_posts_navigation();
+            wp_pagenavi();
 
             else :
 
