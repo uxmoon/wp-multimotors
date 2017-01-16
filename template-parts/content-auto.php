@@ -41,8 +41,8 @@
           'numberposts' => -1,
           'post_status' => null,
           'post_parent' => $post->ID,
-          'order'       => 'ASC',
-          'exclude'     => get_post_thumbnail_id()
+          'order'       => 'DESC',
+          // 'exclude'     => get_post_thumbnail_id()
           );
 
         $attachments = get_posts( $args );
