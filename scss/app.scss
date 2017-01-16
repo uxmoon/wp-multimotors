@@ -181,7 +181,18 @@ p, li, label {
   }
 }
 
+@media (max-width: 480px) {
+  .c-contact-list {
+    float: none;
+    width: 100%;
+    clear: both;
+    text-align: center;
 
+    li {
+      font-size: rem(13);
+    }
+  }
+}
 
 
 // Component - Anchor nav
@@ -314,6 +325,10 @@ p, li, label {
 }
 
 @include breakpoint($bp-desktop) {
+
+  .about-us {
+    padding-left: span(3 of 12);
+  }
 
   .about-us__item {
     @include span(4 of 12);

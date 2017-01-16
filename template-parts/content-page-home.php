@@ -62,11 +62,11 @@ $upload_dir = wp_upload_dir();
 				<p>Cuente con nuestra experiencia y asesoramiento para vender su auto a través de MultiMotors. <br /> <a href="/sobre-nosotros/#vender" title="Conozca más">Conozca más &#187;</a></p>
 			</div>
 
-			<div class="about-us__item">
+			<!-- <div class="about-us__item">
 				<h3>Autos vendidos</h3>
 				<a href="/autos-vendidos/" title="Autos Vendidos"><img src="<?php echo $upload_dir['baseurl']; ?>/2012/10/home_sold.jpg" alt="Autos vendidos" title="Autos vendidos" /></a>
 				<p>Conozca nuestro historial de autos usados vendidos en MultiMotors.<br /> <a href="/autos-vendidos/" title="Ver autos usados vendidos">Ver autos usados vendidos &#187;</a></p>
-			</div>
+			</div> -->
 		</div><!-- .about-us -->
 	</div>
 </article><!-- #post-## -->
