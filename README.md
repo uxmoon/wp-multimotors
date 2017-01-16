@@ -35,3 +35,10 @@ With the [Meta Box](https://wordpress.org/plugins/meta-box/) plugin I was able t
 Using [Admin Columns](https://wordpress.org/plugins/codepress-admin-columns/) I was able to add custom columns in the admin area for each custom post type to have a better overview of the cars information.
 
 To display and filter the cars and motorcycles list I use the paid version of [Search and replace pro](https://www.designsandcode.com/wordpress-plugins/search-filter-pro/) plugin and the free plugin [WP-PageNavi](https://wordpress.org/plugins/wp-pagenavi/) for the pagination.
+
+## Tweaks
+
+- [Contact Form 7](http://contactform7.com/loading-javascript-and-stylesheet-only-when-it-is-necessary/) loading javascript and stylesheet only when it is necessary.
+- Remove emoji code from `<head>` section.
+- Replace WordPress jQuery with external library hosted in Google.
+- Security tweaks using techniques from  Lynda.com [WordPress: Developing Secure Sites](https://www.lynda.com/WordPress-tutorials/WordPress-Developing-Secure-Sites-2016-Q4-REVISION/504072-2.html).
