@@ -1,0 +1,54 @@
+.wpcf7 .button {
+  margin-bottom: 0; }
+
+.wpcf7-response-output {
+  margin: 1em 0 0;
+  padding: 1rem;
+  border-width: 1px;
+  border-style: solid; }
+
+.wpcf7 .screen-reader-response {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  width: 1px;
+  margin: 0;
+  padding: 0;
+  border: 0; }
+
+.wpcf7-mail-sent-ok {
+  background-color: #bdedbc;
+  border-color: #bdedbc;
+  color: #045702; }
+
+.wpcf7-mail-sent-ng {
+  background-color: #ffc9c9;
+  border-color: #ffc9c9;
+  color: #ac1818; }
+
+.wpcf7-spam-blocked, .wpcf7-validation-errors {
+  background-color: #e90010;
+  border-color: #e90010;
+  color: #FFFFFF; }
+
+.wpcf7-form-control-wrap {
+  position: relative; }
+
+.wpcf7-not-valid-tip {
+  color: #e90010;
+  font-size: 1em;
+  display: block; }
+
+.wpcf7-display-none {
+  display: none; }
+
+.wpcf7 .ajax-loader {
+  border: none;
+  vertical-align: middle; }
+
+.wpcf7 .ajax-error {
+  display: none; }
+
+.wpcf7-form.invalid {
+  border: none !important; }
