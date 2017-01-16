@@ -569,29 +569,58 @@ input[type="submit"] {
 // List - Searach and filter
 
 .c-search__sidebar {
-  @include span(3 of 12);
+  display: none;
 }
 
-.c-search__results {
-  @include span(9 of 12);
-}
-
-.c-search__results-item {
-  @include gallery(4 of 12);
-  margin-bottom: gutter();
-  font-size: rem(14);
-
-  img {
+@include breakpoint($bp-desktop) {
+  .c-search__sidebar {
     display: block;
+    @include span(3 of 12);
+  }
+
+  .c-search__results {
+    @include span(9 of 12);
   }
 }
 
+//.c-search__results-item {
+//  @include gallery(4 of 12);
+//  margin-bottom: gutter();
+//  font-size: rem(14);
+//
+//  img {
+//    display: block;
+//  }
+//}
 
-.c-logo {
-  float: left;
+
+@include breakpoint($bp-desktop) {
+  .c-logo {
+    float: left;
+  }
+
+  .main-navigation {
+    float: right;
+    width: 40%;
+  }
+
 }
 
-.main-navigation {
-  float: right;
-  width: 40%;
+
+.item-container {
+  @include clearfix;
+}
+
+.item {
+  @include gallery(1 of 1);
+  margin-bottom: 10px;
+  background-color: #f00;
+
+  @include breakpoint($bp-desktop) {
+    @include gallery(1 of 3);
+  }
+}
+
+.item-details {
+  background-color: #afa;
 }
