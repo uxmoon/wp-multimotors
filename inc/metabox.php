@@ -38,8 +38,8 @@ function mmotors_register_meta_boxes( $meta_boxes ) {
 				'id'      => $prefix . 'is_sell',
 				'type'    => 'select',
 				'options' => array(
-					'si' => __( 'Si', 'mmotors' ),
 					'no' => __( 'No', 'mmotors' ),
+					'si' => __( 'Si', 'mmotors' ),
 				),
 			),
 			array(
@@ -71,10 +71,9 @@ function mmotors_attached_images_meta_box( $meta_boxes ) {
 			array(
 				'name'             => __( 'Fotos cargadas', 'mmotors' ),
 				'id'               => $prefix . 'image_upload',
-				'type'             => 'image_upload',
+				'type'             => 'image_advanced',
 				'force_delete'     => false,
-				'max_file_uploads' => 10,
-				// 'callback'         => 'mmotors_get_images',
+				'max_file_uploads' => 20,
 			),
 		),
 	);
