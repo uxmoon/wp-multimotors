@@ -105,10 +105,7 @@ add_action( 'widgets_init', 'mmotors_widgets_init' );
 function mmotors_scripts() {
 	// wp_enqueue_style( 'mmotors-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'mmotors-google-fonts', 'https://fonts.googleapis.com/css?family=Ruda:400,700' );
-	wp_enqueue_style( 'mmotors-theme', get_template_directory_uri() . '/css/app.css' );
-	// wp_enqueue_style( 'mmotors-search-filter', get_template_directory_uri() . '/css/search-filter.css' );
-	// wp_enqueue_style( 'mmotors-carousel', get_template_directory_uri() . '/css/slick.css' );
-	// wp_enqueue_style( 'mmotors-carousel-theme', get_template_directory_uri() . '/css/slick-theme.css' );
+	wp_enqueue_style( 'mmotors-theme', get_stylesheet_directory_uri() . '/css/app.css', array(), filemtime( get_stylesheet_directory() . '/css/app.css' ) );
 
 	// wp_enqueue_script('jquery');
 	// wp_enqueue_script( 'mmotors-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
