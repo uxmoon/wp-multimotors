@@ -4,7 +4,7 @@ Custom WordPress Theme for used cars dealership based on [underscores](https://u
 
 ## Refactor
 
-Remove [foundation framework](http://foundation.zurb.com/) and replace it with [Susy](https://github.com/oddbird/susy) + [breakpoint sass](https://github.com/oddbird/susy) for layout. 
+Remove [foundation framework](http://foundation.zurb.com/) and replace it with [Susy](https://github.com/oddbird/susy) + [breakpoint sass](https://github.com/at-import/breakpoint) for layout. 
 
 Use of [ITCSS](http://www.creativebloq.com/web-design/manage-large-css-projects-itcss-101517528) principles for scalable and maintanble CSS Architecture.
 
