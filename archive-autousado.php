@@ -13,7 +13,7 @@ get_header(); ?>
     <main id="main" class="site-main" role="main">
 
       <header class="page-header">
-        <?php the_archive_title( '<h1 class="entry-title">', '</h1>' ); ?>
+        <h1 class="entry-title"><?php esc_html_e( 'Autos Usados', 'mmotors' ); ?></h1>
       </header><!-- .page-header -->
 
       <div class="entry-content">

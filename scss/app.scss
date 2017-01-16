@@ -150,6 +150,7 @@ p, li, label {
 .site-branding {
   background-color: $color-gray-4;
   padding: gutter();
+  @include clearfix;
 }
 
 .site-title img {
@@ -411,6 +412,7 @@ p, li, label {
   @include clearfix;
   padding-bottom: gutter() * 2;
 
+  .post-type-archive &,
   .single & {
     padding-top: gutter() * 2;
   }
@@ -582,4 +584,14 @@ input[type="submit"] {
   img {
     display: block;
   }
+}
+
+
+.c-logo {
+  float: left;
+}
+
+.main-navigation {
+  float: right;
+  width: 40%;
 }
