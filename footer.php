@@ -15,7 +15,6 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 
-		<div class="site-info">Copyright &copy; <?php echo date('Y'); ?> MultiMotors</div>
 
 		<?php
 			wp_nav_menu( array(
@@ -23,6 +22,8 @@
 			'theme_location'  => 'secondary' )
 			);
 		?>
+
+		<div class="site-info">Copyright &copy; <?php echo date('Y'); ?> MultiMotors</div>
 
 	</footer><!-- #colophon -->
 </div><!-- #page -->
