@@ -1,0 +1,85 @@
+# Copyright (C) 2016 Automattic
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: MultiMotors 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
+"POT-Creation-Date: 2017-01-16 14:23-0300\n"
+"PO-Revision-Date: 2017-01-16 14:29-0300\n"
+"Last-Translator: \n"
+"Language-Team: UX Moon <uxmoon@gmail.com>\n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.11\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: esc_html_e\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: node_modules\n"
+"X-Poedit-SearchPathExcluded-1: js\n"
+"X-Poedit-SearchPathExcluded-2: inc\n"
+
+# @ _s
+#: 404.php:17
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Página no encontrada."
+
+# @ _s
+#: 404.php:21
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr "Haga click en el logo o en las opciones del menú."
+
+# @ _s
+#: 404.php:33
+msgid "Most Used Categories"
+msgstr ""
+
+#: archive-autoclasico.php:16
+msgid "Autos Clásicos"
+msgstr ""
+
+#: archive-autousado.php:16
+msgid "Autos Usados"
+msgstr ""
+
+#: archive-motos.php:16
+msgid "Motos usadas"
+msgstr ""
+
+# @ _s
+#: comments.php:40 comments.php:61
+msgid "Comment navigation"
+msgstr ""
+
+# @ _s
+#: comments.php:78
+msgid "Comments are closed."
+msgstr ""
+
+#: header.php:53
+msgid "Saltear al contenido"
+msgstr ""
+
+# @ _s
+#: template-parts/content-none.php:14
+msgid "Nothing Found"
+msgstr ""
+
+# @ _s
+#: template-parts/content-none.php:25
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+# @ _s
+#: template-parts/content-none.php:31
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""

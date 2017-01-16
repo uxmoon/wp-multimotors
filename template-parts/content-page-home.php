@@ -45,9 +45,9 @@ $upload_dir = wp_upload_dir();
 			<p>Desde 1992 nos especializamos en la venta de autos premium, siempre en familia.</p>
 		</div><!-- .text-intro -->
 
-		<div class="text-featured">
+		<!--<div class="text-featured">
 			<p>Nuestros autos estuvieron presentes en el programa de Escala Clásica, <a href="/escala-clasica/" title="Mira los vídeos">mira los vídeos</a>.</p>
-		</div><!-- .text-featured -->
+		</div> .text-featured -->
 
 		<div class="about-us">
 			<div class="about-us__item">
