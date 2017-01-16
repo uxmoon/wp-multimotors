@@ -501,13 +501,22 @@ p, li, label {
   font-size: rem(20);
 }
 
-.carousel-single {
-  @include span(8 of 12);
+@include breakpoint($bp-small) {
+  .carousel-single,
+  .c-details {
+    padding-left: gutter() * 2;
+    padding-right: gutter() * 2;
+  }
 }
 
-.c-details {
-  @include span(4 of 12);
-  // @include push(1 of 12);
+@include breakpoint($bp-desktop) {
+  .carousel-single {
+    @include span(8 of 12);
+  }
+
+  .c-details {
+    @include span(4 of 12);
+  }
 }
 
 .c-details__list {
@@ -593,6 +602,9 @@ input[type="submit"] {
 //  }
 //}
 
+.c-logo {
+  text-align: center;
+}
 
 @include breakpoint($bp-desktop) {
   .c-logo {
