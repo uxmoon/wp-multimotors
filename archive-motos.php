@@ -32,6 +32,7 @@ get_header(); ?>
           ?>
 
           <div class="item">
+            <a href="<?php the_permalink()?>">
             <?php
 
               // thumbnail
@@ -52,6 +53,7 @@ get_header(); ?>
             ?>
             <meta itemprop="condition" content="used" />
             <?php echo '<span class="list-item__miles">' . rwmb_meta('cf_autokm') . '</span> Km.'; ?>
+            </a>
           </div>
 
           <?php endwhile;
