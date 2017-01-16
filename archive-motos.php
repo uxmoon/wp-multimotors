@@ -24,6 +24,8 @@ get_header(); ?>
 
         <div class="c-search__results">
 
+          <div class="item-container">
+
           <?php if ( have_posts() ) : ?>
 
           <?php
@@ -33,30 +35,35 @@ get_header(); ?>
 
           <div class="item">
             <a href="<?php the_permalink()?>">
-            <?php
 
-              // thumbnail
-              the_post_thumbnail('thumbnail');
+              <?php the_post_thumbnail('thumbnail'); ?>
 
-              // brand
-              global $post;
-              $terms = wp_get_post_terms( $post->ID, 'marcasmotos');
-              foreach( $terms as $term ) {
-                echo '<span itemprop="brand">' . $term->name . '</span>';
-                unset($term);
-              }
+              <div class="item-details">
+                <?php
+                  // brand
+                  global $post;
+                  $terms = wp_get_post_terms( $post->ID, 'marcasmotos');
+                  foreach( $terms as $term ) {
+                    echo '<span itemprop="brand">' . $term->name . '</span>';
+                    unset($term);
+                  }
 
-              // model
-              echo ' <span itemprop="model">' . rwmb_meta('cf_automodelo') . '</span>';
-              echo '<br>(' . rwmb_meta('cf_autoyear') . ')';
+                  // model
+                  echo ' <span itemprop="model">' . rwmb_meta('cf_automodelo') . '</span>';
+                  echo '<br>(' . rwmb_meta('cf_autoyear') . ')';
 
-            ?>
-            <meta itemprop="condition" content="used" />
-            <?php echo '<span class="list-item__miles">' . rwmb_meta('cf_autokm') . '</span> Km.'; ?>
+                ?>
+                <meta itemprop="condition" content="used" />
+                <?php echo '<span class="list-item__miles">' . rwmb_meta('cf_autokm') . '</span> Km.'; ?>
+              </div>
             </a>
           </div>
 
-          <?php endwhile;
+          <?php endwhile; ?>
+
+          </div>
+
+          <?php
 
             wp_pagenavi();
 

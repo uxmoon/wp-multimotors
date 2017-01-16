@@ -612,15 +612,15 @@ input[type="submit"] {
 }
 
 .item {
-  @include gallery(1 of 1);
   margin-bottom: 10px;
-  background-color: #f00;
+  text-align: center;
 
   @include breakpoint($bp-desktop) {
     @include gallery(1 of 3);
+    text-align: left;
   }
 }
 
 .item-details {
-  background-color: #afa;
+  //background-color: #afa;
 }
