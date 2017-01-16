@@ -410,19 +410,14 @@ p, li, label {
 
 .entry-content {
   @include clearfix;
-  padding-bottom: gutter() * 2;
+  padding: gutter() * 2;
 
-  .post-type-archive &,
-  .single & {
-    padding-top: gutter() * 2;
+  .home & {
+    padding: 0;
+    padding-bottom: gutter() * 2;
   }
 
-  .page-template & {
-    padding-top: gutter() * 2;
-  }
 }
-
-// page-template page-template-page-search-filter page-template-page-search-filter-php page page-id-9 logged-in wp-custom-logo
 
 
 
@@ -436,14 +431,7 @@ p, li, label {
 }
 
 .c-contact__content {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  @include transform(translateY(-50%));
   padding: gutter() * 2;
-  width: span(5 of 12);
-  @include push(6 of 12);
-
   background-color: rgba(0, 0, 0, 0.85);
 
   h4, p {
@@ -451,12 +439,38 @@ p, li, label {
   }
 }
 
-.c-form {
-  @include span(6 of 12);
+@include breakpoint($bp-desktop) {
+
+  .c-contact__content {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    @include transform(translateY(-50%));
+    padding: gutter() * 2;
+    width: span(5 of 12);
+    @include push(6 of 12);
+  }
+
 }
 
-.c-map {
-  @include span(6 of 12);
+@include breakpoint($bp-small) {
+
+  .c-form {
+    margin-bottom: 1rem;
+  }
+
+}
+
+@include breakpoint($bp-desktop) {
+
+  .c-form {
+    @include span(6 of 12);
+  }
+
+  .c-map {
+    @include span(6 of 12);
+  }
+
 }
 
 .c-map__content {
@@ -501,13 +515,6 @@ p, li, label {
   font-size: rem(20);
 }
 
-@include breakpoint($bp-small) {
-  .carousel-single,
-  .c-details {
-    padding-left: gutter() * 2;
-    padding-right: gutter() * 2;
-  }
-}
 
 @include breakpoint($bp-desktop) {
   .carousel-single {
@@ -566,8 +573,8 @@ input[type="submit"] {
 // Carousel - About
 
 .carousel-about {
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 1.38889%;
+  margin-right: 1.38889%;
   margin-bottom: 1rem;
 }
 
