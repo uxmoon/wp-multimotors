@@ -39,68 +39,70 @@
     </defs>
   </svg>
 
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=1406177466346209&version=v2.0";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=1406177466346209&version=v2.0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
 
-<div id="page" class="site">
+  <div id="page" class="site">
 
-  <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Saltear al contenido', 'mmotors' ); ?></a>
+    <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Saltear al contenido', 'mmotors' ); ?></a>
 
-  <header id="masthead" class="site-header" role="banner">
+    <header id="masthead" class="site-header" role="banner">
 
-    <div class="site-header__top">
+      <div class="site-header__top">
 
-      <div class="fb-like" data-href="https://www.facebook.com/MultiMotors" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+        <div class="fb-like" data-href="https://www.facebook.com/MultiMotors" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
 
-      <ul class="c-contact-list">
-        <li> <svg class="icon icon-mail"><use xlink:href="#icon-mail"></use></svg> <span class="screen-reader-text">Dirección:</span> Perú 317, CABA</li>
-        <li> <svg class="icon icon-phone"><use xlink:href="#icon-phone"></use></svg> <span class="screen-reader-text">Teléfono:</span> (011) 4342-1106 / 07</li>
-        <li> <svg class="icon icon-map-marker"><use xlink:href="#icon-map-marker"></use></svg> <span class="screen-reader-text">Email:</span> <a href="<?php echo bloginfo('url') ?>/contactenos" title="Contáctenos">Contáctenos</a></li>
-      </ul>
+        <ul class="c-contact-list">
+          <li> <svg class="icon icon-mail"><use xlink:href="#icon-mail"></use></svg> <span class="screen-reader-text">Dirección:</span> Perú 317, CABA</li>
+          <li> <svg class="icon icon-phone"><use xlink:href="#icon-phone"></use></svg> <span class="screen-reader-text">Teléfono:</span> (011) 4342-1106 / 07</li>
+          <li> <svg class="icon icon-map-marker"><use xlink:href="#icon-map-marker"></use></svg> <span class="screen-reader-text">Email:</span> <a href="<?php echo bloginfo('url') ?>/contactenos" title="Contáctenos">Contáctenos</a></li>
+        </ul>
 
-    </div>
+      </div>
 
-    <div class="site-branding">
+      <div class="site-branding">
 
-      <?php
-      if ( is_front_page() && is_home() ) : ?>
-        <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-        <?php if ( has_custom_logo() ) {
-          the_custom_logo();
-          } else {
-          bloginfo( 'name' );
-        } ?>
-        </a></h1>
+        <div class="c-logo">
+          <?php
+          if ( is_front_page() && is_home() ) : ?>
+            <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+            <?php if ( has_custom_logo() ) {
+              the_custom_logo();
+              } else {
+              bloginfo( 'name' );
+            } ?>
+            </a></h1>
 
-      <?php else : ?>
-        <p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php if ( has_custom_logo() ) {
-          the_custom_logo();
-          } else {
-          bloginfo( 'name' );
-        } ?>
-        </a></p>
-      <?php
-      endif;
+          <?php else : ?>
+            <p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php if ( has_custom_logo() ) {
+              the_custom_logo();
+              } else {
+              bloginfo( 'name' );
+            } ?>
+            </a></p>
+          <?php
+          endif;
 
-      $description = get_bloginfo( 'description', 'display' );
-      if ( $description || is_customize_preview() ) : ?>
-        <p class="site-description  screen-reader-text"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-      <?php
-      endif; ?>
+          $description = get_bloginfo( 'description', 'display' );
+          if ( $description || is_customize_preview() ) : ?>
+            <p class="site-description  screen-reader-text"><?php echo $description; /* WPCS: xss ok. */ ?></p>
+          <?php
+          endif; ?>
+        </div>
 
-      <nav id="site-navigation" class="main-navigation" role="navigation">
-        <?php wp_nav_menu( array(
-          'theme_location'  => 'primary',
-          'menu_id'         => 'primary-menu',
-          'container_class' => 'c-anchor-nav'
-        ) ); ?>
-      </nav><!-- #site-navigation -->
-  </header><!-- #masthead -->
+        <nav id="site-navigation" class="main-navigation" role="navigation">
+          <?php wp_nav_menu( array(
+            'theme_location'  => 'primary',
+            'menu_id'         => 'primary-menu',
+            'container_class' => 'c-anchor-nav'
+          ) ); ?>
+        </nav><!-- #site-navigation -->
+    </header><!-- #masthead -->
 
-  <div id="content" class="site-content">
+    <div id="content" class="site-content">
